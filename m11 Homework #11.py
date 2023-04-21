@@ -141,28 +141,45 @@ employee3.GetInformation()
 # Class: CMPR 114
 # ====================================
 
+# start the RetailItem function
 class RetailItem:
+
+    # this assigns a value to the different fields
     def __init__(self, description, units, price):
         self.description = description
         self.units = units
         self.price = price
 
+    # it is used to access variables that belong to that class
+    def GetInformation(self):
+        print("        ", "Description", "Units", "Inventory", "Price")
+        print("Item # 1", self.description)
+        print("Item # 2", self.units)
+        print("Item # 3", self.price)
+
+# creates the Retail Item 1 object
 item1 = RetailItem()
 item1.description = "Jacker"
 item1.units = "12"
 item1.price = "$59.95"
 
-item2 = RetailItem("Designer Jeans", "40", "$34.95")
+# creates the Retail Item 2 object
+item2 = RetailItem()
+item2 = "Designer Jeans"
+item2.units = "40"
+item2.price = "$34.95"
 
+# creates the Retail Item 3 objects
 item3 = RetailItem()
 item3.description = "Shirt"
 item3.units = "40"
 item3.price = "$24.95"
 
 
-
-
-
+# calling the function
+item1.GetInformation()
+item2.GetInformation()
+item3.GetInformation()
 
 ''''
 =================== Output ===========================
